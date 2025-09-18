@@ -12,9 +12,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* this is for people who prefer using dark in their phones */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #22437A;
     --foreground: #ededed;
   }
 }
