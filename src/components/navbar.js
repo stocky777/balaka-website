@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1} from "react-icons/rx";
@@ -19,7 +20,12 @@ export default function Navbar()
                     document.body.style.overflow = 'auto';
                 };
     }, [isOpen]);
-    
+
+    const closeMenu = () =>
+        {
+            setIsOpen(false);
+        }
+
     return(
         <div>
             {/* main navbar here */}
@@ -33,8 +39,8 @@ export default function Navbar()
                 {/* items only for desktop view*/}
                 <div className="hidden sm:block">
                     <a href="" className="text-2xl px-4">Home</a>
-                    <a href="" className="text-2xl px-4">Gallery</a>
                     <a href="" className="text-2xl px-4">Menu</a>
+                    <a href="" className="text-2xl px-4">Contact us</a>
                 </div>               
             </nav>
             {/* Updated mobile menu */}
@@ -42,9 +48,9 @@ export default function Navbar()
                 ${isOpen ? "fixed" : "hidden"} 
                 inset-0 z-40 flex items-center justify-center font-bold bg-amber-500 sm:hidden`}
             >
-                <a href="" className="text-lg p-4 block transition">Home</a>
-                <a href="" className="text-lg p-4 block transition">Gallery</a>
-                <a href="" className="text-lg p-4 block transition">Menu</a>
+                <Link href="/" className="text-lg p-4 block transition" onClick={closeMenu}>Home</Link>
+                <Link href="/menu" className="text-lg p-4 block transition" onClick={closeMenu}>Menu</Link>
+                <Link href="/about" className="text-lg p-4 block transition" onClick={closeMenu}>Contact us</Link>
             </div>
         </div>
     );

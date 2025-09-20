@@ -58,9 +58,6 @@ export default function Home() {
           <h2 className="text-2xl font-extralight">
             We value your feedback and welcome any comments or suggestions that can help us make your time with us even more enjoyable
           </h2>
-          <h2 className="text-2xl font-extralight">
-            We value your feedback and welcome any comments or suggestions that can help us make your time with us even more enjoyable
-          </h2>
           <h2 className="text-2xl font-bold text-amber-500 bg-amber-100 p-3 rounded-2xl">
             if you have any dietary requirements or allergies, please inform a member or Call us on 01382 660340
           </h2>
