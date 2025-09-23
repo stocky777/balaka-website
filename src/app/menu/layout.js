@@ -10,7 +10,7 @@ export default function MenuLayout({ children }) {
     //console.log(pathname);
     return (
       <section className="min-h-screen py-25 flex flex-col bg-grey-200">
-        <div className="w-full overflow-x-auto bg-amber-400 ">
+        <div className="w-full overflow-x-auto bg-amber-400">
             <div className="flex space-x-4 p-4">
                 {menuCategories.map((category)=>(
                     <Link
