@@ -22,7 +22,7 @@ export default function chefsReccomended()
     return(
         <div>
             <div className='text-1xl font-bold m-4 text-center'>
-                <h1>India's very own and unique style of cooking. Chicken, lamb  or king prawn marinated overnight in yoghurt,
+                <h1>Indias very own and unique style of cooking. Chicken, lamb  or king prawn marinated overnight in yoghurt,
                     lemon jice, garlic, ginger, turmeric and mixed tandoori spices, cooked over a charcoal flmae in a tandoor oven.
                     Served with Pilau rice, mild / medium or hot sauce and salad on the side. Served in a sizzling dish.
                 </h1>
