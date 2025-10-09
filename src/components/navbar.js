@@ -37,20 +37,23 @@ export default function Navbar()
                     {isOpen ? <RxCross1/> : <RxHamburgerMenu/>}
                 </button>
                 {/* items only for desktop view*/}
-                <div className="hidden sm:block">
-                    <a href="" className="text-2xl px-4">Home</a>
-                    <a href="" className="text-2xl px-4">Menu</a>
-                    <a href="" className="text-2xl px-4">Contact us</a>
+                <div className="hidden  sm:block">
+                    <Link href="/" className="text-2xl px-4">Home</Link>
+                    <Link href="/menu" className="text-2xl px-4">Menu</Link>
+                    <Link href="/about" className="text-2xl px-4">Contact us</Link>
                 </div>               
             </nav>
             {/* Updated mobile menu */}
             <div className={`
-                ${isOpen ? "fixed" : "hidden"} 
-                inset-0 z-40 flex items-center justify-center font-bold bg-amber-500 sm:hidden`}
-            >
-                <Link href="/" className="text-lg p-4 block transition" onClick={closeMenu}>Home</Link>
-                <Link href="/menu" className="text-lg p-4 block transition" onClick={closeMenu}>Menu</Link>
-                <Link href="/about" className="text-lg p-4 block transition" onClick={closeMenu}>Contact us</Link>
+                fixed inset-0 z-40 flex flex-col text-left justify-center font-bold bg-gradient-to-b from-blue-950 to-blue-400 transition-all duration-300 ease-out
+                ${isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}
+                sm:hidden
+            `}>
+                
+                    <Link href="/" className="text-3xl p-4 block transition" onClick={closeMenu}>Home</Link>
+                    <Link href="/menu" className="text-3xl p-4 block transition" onClick={closeMenu}>Menu</Link>
+                    <Link href="/about" className="text-3xl p-4 block transition" onClick={closeMenu}>Contact us</Link>
+
             </div>
         </div>
     );

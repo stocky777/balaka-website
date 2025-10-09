@@ -27,10 +27,10 @@ export default function About(){
                         if you have any query or want to make a reservation, please give us a call. We look forward to serving you and making your dining experience memorable!
                     </p>
                 </div>
-                <p className="text-lg mb-4 rounded-lg shadow-md bg-blue-500 p-4">
+                <p className="text-lg mb-4 rounded-lg shadow-md bg-blue-900 p-4">
                     You can email us at: <a href="mailto:info@balaka.com" className="text-amber-300 underline">info@balaka.com</a>
                 </p>
-                <p className="text-lg mb-4 rounded-lg shadow-md bg-blue-500 p-6">
+                <p className="text-lg mb-4 rounded-lg shadow-md bg-blue-900 p-6">
                     You can call us at: <a href="callto:+441382660340" className="text-amber-400 underline">+441382660340</a>
                 </p>
                 
