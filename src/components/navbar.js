@@ -3,11 +3,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1} from "react-icons/rx";
-
+import { usePathname } from "next/navigation";
 export default function Navbar()
 {
     // useState hook for the navbar
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
+    // Prevent background scrolling when menu is open
     useEffect(()=>{
         if(isOpen)
             {
@@ -20,27 +23,34 @@ export default function Navbar()
                     document.body.style.overflow = 'auto';
                 };
     }, [isOpen]);
-
+    // Close menu on navigation 
     const closeMenu = () =>
         {
             setIsOpen(false);
         }
 
+    const isActiveLink = (path)=>
+        {
+            return pathname === path;
+        }
+
     return(
         <div>
             {/* main navbar here */}
-            <nav className='fixed top z-50 h-auto p-8 justify-between flex items-center'>
+            <nav className='fixed top z-50 h-auto p-8 justify-between flex items-center w-full '>
                 {/* logo */}
-                <div className="text-3xl font-semibold">Balaka</div>
+                <Link href="/" onClick={closeMenu}><div className="text-3xl font-semibold hover:text-amber-200">Balaka</div></Link>
                 {/* burger icon */}
-                <button className="fixed right-2 sm:hidden text-4xl bg-amber-500 rounded-full p-3" onClick={() => setIsOpen(!isOpen)}>
+                <button className="fixed right-2 sm:hidden text-4xl bg-amber-400 rounded-full p-3" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <RxCross1/> : <RxHamburgerMenu/>}
                 </button>
                 {/* items only for desktop view*/}
-                <div className="hidden  sm:block">
-                    <Link href="/" className="text-2xl px-4">Home</Link>
-                    <Link href="/menu" className="text-2xl px-4">Menu</Link>
-                    <Link href="/about" className="text-2xl px-4">About us</Link>
+                <div className="hidden sm:block text-white backdrop-blur-2xl w-auto rounded-full">
+                    <div className="p-2">
+                        <Link href="/" className={`text-2xl w-auto px-4 hover:text-amber-300 duration-200 ${isActiveLink("/") ? "text-amber-500 font-bold" : "text-white"}`}>Home</Link>
+                        <Link href="/menu" className={`text-2xl w-auto px-4 hover:text-amber-300 duration-200 ${isActiveLink("/menu") ? "text-amber-500 font-bold" : "text-white"}`}>Menu</Link>
+                        <Link href="/about" className={`text-2xl w-auto px-4 hover:text-amber-300 duration-200 ${isActiveLink("/about") ? "text-amber-500 font-bold" : "text-white"}`}>About us</Link>
+                    </div>
                 </div>               
             </nav>
             {/* Updated mobile menu */}
