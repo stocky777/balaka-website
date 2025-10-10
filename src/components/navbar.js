@@ -40,7 +40,7 @@ export default function Navbar()
                 <div className="hidden  sm:block">
                     <Link href="/" className="text-2xl px-4">Home</Link>
                     <Link href="/menu" className="text-2xl px-4">Menu</Link>
-                    <Link href="/about" className="text-2xl px-4">Contact us</Link>
+                    <Link href="/about" className="text-2xl px-4">About us</Link>
                 </div>               
             </nav>
             {/* Updated mobile menu */}
@@ -52,7 +52,7 @@ export default function Navbar()
                 
                     <Link href="/" className="text-3xl p-4 block transition" onClick={closeMenu}>Home</Link>
                     <Link href="/menu" className="text-3xl p-4 block transition" onClick={closeMenu}>Menu</Link>
-                    <Link href="/about" className="text-3xl p-4 block transition" onClick={closeMenu}>Contact us</Link>
+                    <Link href="/about" className="text-3xl p-4 block transition" onClick={closeMenu}>About us</Link>
 
             </div>
         </div>
