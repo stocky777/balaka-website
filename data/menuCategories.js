@@ -1,4 +1,5 @@
 export const menuCategories = [
+    { name: "Christmas Menu", path: "/menu/christmas_menu" },
     { name: "Starters", path: "/menu/starters" },
     { name: "Chef's reccomended", path: "/menu/chef-reccomended" },
     { name: "Tandoori Dishes", path: "/menu/tandoori-dishes" },

@@ -71,7 +71,7 @@ export default function Home() {
               <div className="md:w-3/4 ">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.682058928804!2d-2.9909263999999998!3d56.45601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865d1da7e4b6e7%3A0x1d9c2c27107e1acc!2sBALAKA%20INDIAN%20RESTAURANT!5e0!3m2!1sen!2suk!4v1759952150547!5m2!1sen!2suk" className="w-full h-96 rounded-3xl shadow-2xl" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
-              <div className="md:w-1/4 bg-amber-200 text-blue-900 rounded-3xl p-4 m-4 h-full shadow-2xl">
+              <div className="md:w-1/4 text-white rounded-3xl p-4 m-4 h-full shadow-2xl">
                   <p className="text-2xl md:text-lg font-semibold text-center mb-4">
                     We are located at 123 Perth Road, Dundee, DD1 4JD in one of the liveliest street of Dundee city centre. We pride ourselves on offering a warm and welcoming atmosphere.
                   </p>

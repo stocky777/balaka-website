@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #22437A;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -13,12 +13,12 @@
 }
 
 /* this is for people who prefer using dark in their phones */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #22437A;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
